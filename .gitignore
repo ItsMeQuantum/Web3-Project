@@ -1,0 +1,43 @@
+# Hardhat files
+artifacts/
+cache/
+typechain/
+typechain-types/
+dist/
+
+# Environment variables
+.env
+.env.local
+.env.test
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+.cache/
+dist/
+build/

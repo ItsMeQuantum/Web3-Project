@@ -1,0 +1,30 @@
+{
+  "name": "web3-wallet-token-project",
+  "version": "1.0.0",
+  "description": "An Ethereum wallet and custom ERC20 token DApp built from scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js",
+    "deploy:localhost": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "node": "hardhat node",
+    "clean": "hardhat clean"
+  },
+  "keywords": ["ethereum", "erc20", "wallet", "web3"],
+  "author": "Web3 Developer",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0",
+    "chai": "^4.3.7",
+    "ethers": "^6.10.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.5"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "dotenv": "^16.3.1",
+    "web3": "^4.2.0"
+  }
+}

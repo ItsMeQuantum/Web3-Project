@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Web3 Wallet & ERC20 Token</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #667eea;
+        }
+
+        h1 {
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        pre {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .feature-list {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            margin: 15px 0;
+        }
+
+        .feature-list li {
+            margin: 8px 0;
+        }
+
+        .command {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th {
+            background: #667eea;
+            color: white;
+        }
+
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Web3 Wallet & ERC20 Token Documentation</h1>
+
+        <h2>Overview</h2>
+        <p>This project provides a complete, production-ready Web3 wallet system with a custom ERC20 token implementation built from scratch using Solidity and ethers.js.</p>
+
+        <div class="feature-list">
+            <strong>✨ Key Features:</strong>
+            <ul>
+                <li><strong>Custom ERC20 Token:</strong> Full ERC20 implementation with mint, burn, and ownership capabilities</li>
+                <li><strong>Ether Wallet:</strong> Manage ETH deposits/withdrawals with secure balance tracking</li>
+                <li><strong>Token Management:</strong> Deposit, withdraw, and transfer ERC20 tokens</li>
+                <li><strong>Multi-Token Support:</strong> Register and manage multiple ERC20 tokens</li>
+                <li><strong>Web Frontend:</strong> Beautiful, responsive UI for wallet interactions</li>
+                <li><strong>Comprehensive Testing:</strong> Full test suite with 100+ test cases</li>
+                <li><strong>Production Ready:</strong> Hardhat framework with deployment scripts</li>
+            </ul>
+        </div>
+
+        <h2>Project Structure</h2>
+        <pre>
+Web3-Project/
+├── contracts/              # Smart contracts
+│   ├── MyToken.sol        # Custom ERC20 token
+│   └── EtherWallet.sol    # Wallet contract
+├── test/                  # Test files
+│   ├── MyToken.test.js    # Token tests
+│   └── EtherWallet.test.js # Wallet tests
+├── scripts/               # Deployment & interaction scripts
+│   ├── deploy.js          # Deployment script
+│   ├── check.js           # Verification script
+│   └── interact.js        # Interaction examples
+├── frontend/              # Web3 frontend
+│   ├── index.html         # Main UI
+│   ├── docs.html          # Documentation
+│   └── scripts/wallet-app.js # Frontend logic
+├── artifacts/             # Compiled contracts (auto-generated)
+├── hardhat.config.js      # Hardhat configuration
+├── package.json           # Dependencies
+└── README.md              # This file
+        </pre>
+
+        <h2>Quick Start</h2>
+
+        <h3>1. Installation</h3>
+        <div class="command">npm install</div>
+
+        <h3>2. Compile Contracts</h3>
+        <div class="command">npm run compile</div>
+
+        <h3>3. Run Tests</h3>
+        <div class="command">npm test</div>
+
+        <h3>4. Start Local Network</h3>
+        <div class="command">npm run node</div>
+        
+        <p>In another terminal:</p>
+        <div class="command">npm run deploy:localhost</div>
+
+        <h3>5. Run Interactions</h3>
+        <div class="command">npx hardhat run scripts/interact.js --network localhost</div>
+
+        <h2>Smart Contracts</h2>
+
+        <h3>MyToken.sol - Custom ERC20 Implementation</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                    <th>Parameters</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>transfer()</td>
+                    <td>Transfer tokens to address</td>
+                    <td>to, amount</td>
+                </tr>
+                <tr>
+                    <td>approve()</td>
+                    <td>Approve spender</td>
+                    <td>spender, amount</td>
+                </tr>
+                <tr>
+                    <td>transferFrom()</td>
+                    <td>Transfer on behalf</td>
+                    <td>from, to, amount</td>
+                </tr>
+                <tr>
+                    <td>mint()</td>
+                    <td>Create new tokens (owner only)</td>
+                    <td>to, amount</td>
+                </tr>
+                <tr>
+                    <td>burn()</td>
+                    <td>Destroy tokens</td>
+                    <td>amount</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>EtherWallet.sol - Wallet Management</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                    <th>Parameters</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>depositEth()</td>
+                    <td>Deposit ETH</td>
+                    <td>payable</td>
+                </tr>
+                <tr>
+                    <td>withdrawEth()</td>
+                    <td>Withdraw ETH</td>
+                    <td>amount</td>
+                </tr>
+                <tr>
+                    <td>depositToken()</td>
+                    <td>Deposit ERC20 token</td>
+                    <td>tokenAddress, amount</td>
+                </tr>
+                <tr>
+                    <td>withdrawToken()</td>
+                    <td>Withdraw ERC20 token</td>
+                    <td>tokenAddress, amount</td>
+                </tr>
+                <tr>
+                    <td>transferToken()</td>
+                    <td>Transfer tokens between users</td>
+                    <td>tokenAddress, to, amount</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Deployment</h2>
+
+        <h3>Local Development (Hardhat)</h3>
+        <div class="command">npm run deploy:localhost</div>
+
+        <h3>Sepolia Testnet</h3>
+        <div class="note">
+            First, set up your <code>.env</code> file:
+            <pre>SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_KEY
+PRIVATE_KEY=your_private_key
+ETHERSCAN_API_KEY=your_api_key</pre>
+        </div>
+        <div class="command">npm run deploy:sepolia</div>
+
+        <h3>Mainnet</h3>
+        <div class="command">npm run deploy -- --network mainnet</div>
+
+        <h2>Frontend Setup</h2>
+
+        <h3>Update Contract Addresses</h3>
+        <p>Edit <code>frontend/scripts/wallet-app.js</code> and update:</p>
+        <pre>
+const CONTRACTS = {
+  TOKEN_ADDRESS: "0x...", // Your deployed token
+  WALLET_ADDRESS: "0x...", // Your deployed wallet
+};
+        </pre>
+
+        <h3>Install ethers.js</h3>
+        <p>Add to your <code>index.html</code>:</p>
+        <pre>&lt;script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"&gt;&lt;/script&gt;</pre>
+
+        <h3>Open in Browser</h3>
+        <p>Simply open <code>frontend/index.html</code> in your browser with MetaMask installed.</p>
+
+        <h2>Testing</h2>
+
+        <h3>Run All Tests</h3>
+        <div class="command">npm test</div>
+
+        <h3>Run Specific Test File</h3>
+        <div class="command">npx hardhat test test/MyToken.test.js</div>
+
+        <h3>Test Coverage</h3>
+        <div class="command">npx hardhat coverage</div>
+
+        <h2>Common Operations</h2>
+
+        <h3>Deploy Token with Custom Parameters</h3>
+        <p>Edit <code>scripts/deploy.js</code> and modify:</p>
+        <pre>
+const token = await MyToken.deploy("My Custom Token", "MCT", 5000000n);
+        </pre>
+
+        <h3>Verify Contract on Etherscan</h3>
+        <div class="command">npx hardhat verify --network sepolia DEPLOYED_ADDRESS CONSTRUCTOR_ARGS</div>
+
+        <h3>Interact with Deployed Contract</h3>
+        <p>Use <code>scripts/interact.js</code> as a template for custom interactions.</p>
+
+        <h2>Security Considerations</h2>
+        <ul>
+            <li>🔐 Never commit <code>.env</code> file with private keys</li>
+            <li>✅ Always test on testnet before mainnet deployment</li>
+            <li>⚠️ Use reputable RPCs (Infura, Alchemy, QuickNode)</li>
+            <li>🔍 Consider contract audit before production use</li>
+            <li>💾 Back up your private keys securely</li>
+        </ul>
+
+        <h2>Troubleshooting</h2>
+
+        <h3>Connection Issues</h3>
+        <ul>
+            <li>Ensure MetaMask is installed and connected to the correct network</li>
+            <li>Check that contract addresses are correct in <code>wallet-app.js</code></li>
+            <li>Verify RPC URL in hardhat.config.js</li>
+        </ul>
+
+        <h3>Transaction Failures</h3>
+        <ul>
+            <li>Check account balance (ETH for gas)</li>
+            <li>Verify token approval before deposits</li>
+            <li>Review contract state and permissions</li>
+        </ul>
+
+        <h3>Compilation Errors</h3>
+        <ul>
+            <li>Run <code>npm install</code> to install dependencies</li>
+            <li>Clear cache: <code>npm run clean</code></li>
+            <li>Check Solidity version in hardhat.config.js</li>
+        </ul>
+
+        <h2>Resources</h2>
+        <ul>
+            <li><a href="https://hardhat.org/" target="_blank">Hardhat Documentation</a></li>
+            <li><a href="https://docs.ethers.org/" target="_blank">ethers.js Documentation</a></li>
+            <li><a href="https://eips.ethereum.org/EIPS/eip-20" target="_blank">ERC20 Standard</a></li>
+            <li><a href="https://ethereumdev.io/" target="_blank">Ethereum Development</a></li>
+            <li><a href="https://metamask.io/" target="_blank">MetaMask</a></li>
+        </ul>
+
+        <h2>License</h2>
+        <p>This project is licensed under the MIT License. See LICENSE file for details.</p>
+    </div>
+</body>
+</html>
