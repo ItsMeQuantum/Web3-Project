@@ -1,8 +1,8 @@
-# 🚀 Web3 Wallet & ERC20 Token Project
+# Web3 Wallet & ERC20 Token Project
 
 A complete, production-ready Web3 application featuring a custom Ethereum wallet and personalized ERC20 token implementation built entirely from scratch.
 
-## ✨ Features
+##  Features
 
 ### Smart Contracts
 - **MyToken.sol** - Custom ERC20 token with:
@@ -33,32 +33,32 @@ A complete, production-ready Web3 application featuring a custom Ethereum wallet
 - Local hardhat node for testing
 - Contract verification scripts
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Web3-Project/
 ├── contracts/
-│   ├── MyToken.sol          # Custom ERC20 token implementation
-│   └── EtherWallet.sol      # Ethereum wallet contract
+│   ├── MyToken.sol          
+│   └── EtherWallet.sol      
 ├── test/
-│   ├── MyToken.test.js      # Token unit tests
-│   └── EtherWallet.test.js  # Wallet unit tests
+│   ├── MyToken.test.js      
+│   └── EtherWallet.test.js  
 ├── scripts/
-│   ├── deploy.js            # Deployment script
-│   ├── check.js             # Contract verification
-│   └── interact.js          # Usage examples
+│   ├── deploy.js            
+│   ├── check.js             
+│   └── interact.js          
 ├── frontend/
-│   ├── index.html           # Main wallet UI
-│   ├── docs.html            # Full documentation
+│   ├── index.html           
+│   ├── docs.html            
 │   └── scripts/
-│       └── wallet-app.js    # Frontend Web3 logic
-├── hardhat.config.js        # Hardhat configuration
-├── package.json             # Dependencies
-├── .env.example             # Environment template
-└── README.md                # This file
+│       └── wallet-app.js    
+├── hardhat.config.js       
+├── package.json             
+├── .env.example             
+└── README.md                
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Node.js (v16+)
@@ -111,23 +111,23 @@ Web3-Project/
 Create a `.env` file based on `.env.example`:
 
 ```env
-# Network RPC URLs
+]
 SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_KEY
 MAINNET_RPC_URL=https://mainnet.infura.io/v3/YOUR_INFURA_KEY
 
-# Private Key (NEVER commit this)
+]
 PRIVATE_KEY=your_private_key_here
 
-# Etherscan API Key for verification
+
 ETHERSCAN_API_KEY=your_etherscan_api_key
 
-# Token Configuration
+
 TOKEN_NAME=MyToken
 TOKEN_SYMBOL=MTK
 TOKEN_INITIAL_SUPPLY=1000000
 ```
 
-## 📋 Smart Contract API
+##  Smart Contract API
 
 ### MyToken.sol Functions
 
@@ -156,23 +156,23 @@ TOKEN_INITIAL_SUPPLY=1000000
 | `transferToken()` | Transfer tokens between users | `tokenAddress: address, to: address, amount: uint256` |
 | `registerToken()` | Register token (owner) | `tokenAddress: address` |
 
-## 🧪 Testing
+##  Testing
 
 Run the comprehensive test suite:
 
 ```bash
-# Run all tests
+
 npm test
 
-# Run specific test file
+
 npx hardhat test test/MyToken.test.js
 npx hardhat test test/EtherWallet.test.js
 
-# Run with coverage
+
 npx hardhat coverage
 ```
 
-## 🌐 Deployment
+##  Deployment
 
 ### Local Network (Hardhat)
 ```bash
@@ -206,17 +206,17 @@ npm run node             # Start hardhat node
 npm run clean            # Clean build artifacts
 ```
 
-## 🔐 Security Features
+##  Security Features
 
-- ✅ ERC20 standard compliance
-- ✅ Input validation on all functions
-- ✅ Owner access controls
-- ✅ Zero address checks
-- ✅ Overflow/underflow protection (Solidity 0.8+)
-- ✅ Reentrancy-safe patterns
-- ✅ Event logging for all state changes
+-  ERC20 standard compliance
+-  Input validation on all functions
+-  Owner access controls
+-  Zero address checks
+-  Overflow/underflow protection (Solidity 0.8+)
+-  Reentrancy-safe patterns
+-  Event logging for all state changes
 
-## 📖 Frontend Usage
+##  Frontend Usage
 
 ### Connecting Wallet
 1. Click "Connect Wallet" button
@@ -238,7 +238,7 @@ npm run clean            # Clean build artifacts
 - Wallet type
 - Recent transactions
 
-## 🔄 Workflow Example
+##  Workflow Example
 
 ```javascript
 // 1. Deploy contracts
@@ -265,7 +265,7 @@ await wallet.depositToken(tokenAddress, amount);
 await wallet.transferToken(tokenAddress, recipientAddress, amount);
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### MetaMask Connection Issues
 - Ensure MetaMask is on the correct network (Hardhat: `127.0.0.1:8545`)
@@ -287,7 +287,7 @@ await wallet.transferToken(tokenAddress, recipientAddress, amount);
 - Run `npm run clean` to clear build cache
 - Verify Node.js and Hardhat versions
 
-## 📚 Learning Resources
+## Learning Resources
 
 - [Hardhat Documentation](https://hardhat.org/)
 - [ethers.js Docs](https://docs.ethers.org/)
@@ -295,7 +295,7 @@ await wallet.transferToken(tokenAddress, recipientAddress, amount);
 - [Ethereum Development](https://ethereum.org/developers)
 - [Solidity Docs](https://docs.soliditylang.org/)
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Feel free to:
 - Report bugs
@@ -303,16 +303,10 @@ Contributions are welcome! Feel free to:
 - Submit pull requests
 - Improve documentation
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License - see LICENSE file for details.
+This project is licensed under the MIT License - see LICENSE file for details
 
-## 👨‍💻 Author
+## Author
 
 Built with ❤️ for Web3 developers
-
----
-
-**Happy coding! 🚀**
-
-For detailed documentation, see `frontend/docs.html` in your browser.
