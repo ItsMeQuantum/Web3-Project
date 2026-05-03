@@ -104,18 +104,18 @@ Web3-Project/
    - Connect MetaMask to `http://127.0.0.1:8545`
    - Update contract addresses in `frontend/scripts/wallet-app.js`
 
-## 🔧 Configuration
+##  Configuration
 
 ### Environment Variables
 
 Create a `.env` file based on `.env.example`:
 
 ```env
-]
+
 SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_KEY
 MAINNET_RPC_URL=https://mainnet.infura.io/v3/YOUR_INFURA_KEY
 
-]
+
 PRIVATE_KEY=your_private_key_here
 
 
@@ -194,16 +194,16 @@ npx hardhat verify --network sepolia CONTRACT_ADDRESS Constructor_Args
 npm run deploy -- --network mainnet
 ```
 
-## 📚 Available Scripts
+## Available Scripts
 
 ```bash
-npm run test              # Run all tests
-npm run compile          # Compile contracts
-npm run deploy           # Deploy to configured network
-npm run deploy:localhost # Deploy to local hardhat node
-npm run deploy:sepolia   # Deploy to Sepolia testnet
-npm run node             # Start hardhat node
-npm run clean            # Clean build artifacts
+npm run test             
+npm run compile          
+npm run deploy           
+npm run deploy:localhost 
+npm run deploy:sepolia   
+npm run node             
+npm run clean            
 ```
 
 ##  Security Features
